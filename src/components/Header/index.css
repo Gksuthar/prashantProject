@@ -7,7 +7,7 @@
 
 /* Navbar Styles */
 .navbar {
-  position: fixed; /* Fix the navbar at the top while scrolling */
+  position: sticky;
   top: 0;
   width: 100vw;
   height: 90px;

@@ -122,7 +122,7 @@
   justify-content: space-between; /* Changed from center to space-between for even distribution */
   max-width: 1178px; /* Match Figma design width */
   width: 100%;
-  background-color: bisque;
+  /* background-color: bisque; */
 }
 
 /* Why Item */
@@ -157,7 +157,7 @@
 
 .check-icon {
   width: 100%;
-  height: 50%;
+  /* height: 50%; */
 }
 
 /* Remove absolute positioning for icons */

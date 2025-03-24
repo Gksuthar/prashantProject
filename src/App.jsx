@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Footer from './components/Footer';
 import WelcomeSection from './components/WelcometoObiztec';
 import Services from './components/Services';
+import WhyChooseObiztec from './components/WhyChoose'
 function App() {
 
   return (
@@ -12,6 +13,8 @@ function App() {
       <Home/>
       <WelcomeSection/>
       <Services/>
+      <WhyChooseObiztec/>
+      <Footer/>
    
 
     </>
