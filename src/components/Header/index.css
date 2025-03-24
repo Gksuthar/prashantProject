@@ -1,0 +1,264 @@
+/* Navbar Styles */
+.navbar {
+  position: absolute;
+  width: 100vw;
+  height: 90px;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+}
+
+.navbar-logo {
+  position: absolute;
+  width: 170.86px;
+  height: 46px;
+  left: 80px;
+  top: 25px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-highlight {
+  color: #22c55e;
+}
+
+.navbar-links {
+  position: absolute;
+  width: 793px;
+  height: 20px;
+  left: calc(50% - 793px / 2 + 0.5px);
+  top: 35px;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+/* Home */
+.dropdown:nth-child(1) .dropdown-toggle {
+  position: absolute;
+  width: 47px;
+  height: 19px;
+  left: 0px;
+  top: 0px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.dropdown:nth-child(1) .dropdown-arrow {
+  z-index: 10;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 55px;
+  top: 5px;
+  color: #22c55e;
+}
+
+/* Pages */
+.dropdown:nth-child(2) .dropdown-toggle {
+  position: absolute;
+  z-index: 10;
+  width: 50px;
+  height: 19px;
+  left: 86.31px;
+  top: 0px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown:nth-child(2) .dropdown-arrow {
+  position: absolute;
+  z-index: 10;
+
+  width: 8px;
+  height: 8px;
+  left: 144.31px;
+  top: 5px;
+  color: #22c55e;
+}
+
+/* Services */
+.dropdown:nth-child(3) .dropdown-toggle {
+  position: absolute;
+  width: 71px;
+  height: 19px;
+  left: 175.63px;
+  top: 0px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown:nth-child(3) .dropdown-arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 254.63px;
+  top: 5px;
+  color: #22c55e;
+}
+
+/* Portfolio */
+.dropdown:nth-child(4) .dropdown-toggle {
+  position: absolute;
+  width: 71px;
+  height: 19px;
+  left: 285.94px;
+  top: 0px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown:nth-child(4) .dropdown-arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 364.94px;
+  top: 5px;
+  color: #22c55e;
+}
+
+/* Blog */
+.dropdown:nth-child(5) .dropdown-toggle {
+  position: absolute;
+  width: 36px;
+  height: 19px;
+  left: 396.25px;
+  top: 0px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown:nth-child(5) .dropdown-arrow {
+  position: absolute;
+  width: 8px;
+  height: 7.67px;
+  left: 440.07px;
+  top: 5px;
+  color: #22c55e;
+}
+
+/* Contact Us */
+.nav-link:nth-child(6) {
+  position: absolute;
+  width: 91px;
+  height: 19px;
+  left: 471.15px;
+  top: 1px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* About Us */
+.nav-link:nth-child(7) {
+  position: absolute;
+  width: 76px;
+  height: 19px;
+  left: 583px;
+  top: 1px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Our Approach */
+.nav-link:nth-child(8) {
+  position: absolute;
+  width: 114px;
+  height: 19px;
+  left: 679px;
+  top: 1px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.dropdown-toggle:hover,
+.nav-link:hover {
+  color: #22c55e;
+}
+
+.navbar-button {
+  position: absolute;
+  width: 211px;
+  height: 49px;
+  left: 1149px;
+  top: 21px;
+  background-color: #22c55e;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 1.25px;
+  color: #000000;
+  padding: 0 1.5rem;
+}
+
+.navbar-button:hover {
+  background-color: #16a34a;
+}
+
