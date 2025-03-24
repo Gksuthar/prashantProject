@@ -1,7 +1,6 @@
 import React from 'react';
-import Navbar from '../Header';
 import './index.css';
-
+import Navbar from '../../components/Header/index'
 const Hero = () => {
   return (
     <>

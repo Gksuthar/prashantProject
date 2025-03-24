@@ -1,33 +1,28 @@
-/* WhyChooseObiztec.css */
+/* index.css */
 
 /* Import the Inter font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
 
 /* Section Why */
 .why-section {
-  position: absolute;
-  width: 1260.69px;
-  height: 1400px;
-  left: 84px;
-  top: 0px; /* Adjusted from 3227px to 0px (or set to 1000px if following another section) */
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  position: relative;
 }
 
 /* Header */
 .header {
-  position: absolute;
-  width: 542px;
-  height: 117px;
-  left: 477px;
-  top: 0px; /* Adjusted from 3227px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
 /* Why Choose Obiztec Heading */
 .why-heading {
-  position: absolute;
-  width: 463px;
-  height: 57px;
-  left: 477px;
-  top: 30px; /* Adjusted from 3257px (3257 - 3227 = 30px) */
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -35,67 +30,56 @@
   line-height: 57px;
   letter-spacing: -0.005em;
   color: #000000;
+  text-align: center;
 }
 
-/* Question Icon (bitcoin-icons:question-filled) */
+/* Question Icon */
 .question-icon {
   position: absolute;
-  width: 117px;
-  height: 117px;
-  left: 902px;
-  top: 0px; /* Adjusted from 3227px */
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-/* Vector 1 */
-.question-icon .vector-1 {
-  position: absolute;
-  left: 44.79%;
-  right: 44.79%;
-  top: 65.62%;
-  bottom: 23.96%;
+.question-icon-svg {
+  width: 14px;
+  height: 14px;
   background: #58F93B;
-}
-
-/* Vector 2 */
-.question-icon .vector-2 {
-  position: absolute;
-  left: 33.33%;
-  right: 33.33%;
-  top: 25%;
-  bottom: 39.58%;
-  background: #58F93B;
+  border-radius: 50%;
 }
 
 /* Why Img Box */
 .why-img-box {
-  position: absolute;
-  width: 1260.69px;
-  height: 688px;
-  left: 84px;
-  top: 157px; /* Adjusted from 3384px (3384 - 3227 = 157px) */
+  position: relative;
+  width: 100%;
+  height: 450px;
+  margin-bottom: 1.5rem;
 }
 
 /* Rectangle 4 */
 .img-rectangle {
   box-sizing: border-box;
   position: absolute;
-  width: 956px;
-  height: 380px;
-  left: 261px;
-  top: 274px; /* Adjusted from 3501px (3501 - 3227 = 274px) */
+  width: 60%;
+  height: 350px;
+  left: 20%;
+  top: 15%;
   border: 3px solid #58F93B;
   border-radius: 11px;
+  z-index: 1;
 }
 
-/* Image 1 (pexels-alphatradezone-5833320.jpg) */
+/* Image 1 */
 .img-1 {
   position: absolute;
-  width: 628.19px;
-  height: 419px;
-  left: 84px;
-  top: 157px; /* Adjusted from 3384px (3384 - 3227 = 157px) */
+  width: 45%;
+  max-width: 550px;
+  height: 350px;
+  left: 80px;
+  top: 0;
   border-radius: 11px;
   overflow: hidden;
+  z-index: 3;
 }
 
 .img-1 img {
@@ -104,15 +88,17 @@
   object-fit: cover;
 }
 
-/* Image 2 (pexels-aathif-10457031.jpg) */
+/* Image 2 */
 .img-2 {
   position: absolute;
-  width: 649.69px;
-  height: 526px;
-  left: 695px;
-  top: 319px; /* Adjusted from 3546px (3546 - 3227 = 319px) */
+  width: 45%;
+  max-width: 550px;
+  height: 350px;
+  right: 80px;
+  top: 100px;
   border-radius: 11px;
   overflow: hidden;
+  z-index: 2;
 }
 
 .img-2 img {
@@ -121,378 +107,195 @@
   object-fit: cover;
 }
 
+.why-text {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
 /* Why Text Box */
 .why-text-box {
-  position: absolute;
-  width: 1178px;
-  height: 466px;
-  left: 92px;
-  top: 934px; /* Adjusted from 4161px (4161 - 3227 = 934px) */
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between; /* Changed from center to space-between for even distribution */
+  max-width: 1178px; /* Match Figma design width */
+  width: 100%;
+  background-color: bisque;
 }
 
 /* Why Item */
 .why-item {
-  position: absolute;
+  display: flex;
+  align-items: flex-start; /* Align icon and text at the top */
+  width: 48%; /* Two items per row */
+  margin-bottom: 1rem;
+  padding-left: 0; /* Remove padding-left to avoid misalignment */
 }
 
-/* Why 1: Affordable & Scalable Solutions */
-.why-1 {
-  width: 568px;
-  height: 90px;
-  left: 93px;
-  top: 934px; /* Adjusted from 4161px (4161 - 3227 = 934px) */
-}
-
-/* Why 2: Custom Development */
-.why-2 {
-  width: 526px;
-  height: 90px;
-  left: 744px;
-  top: 934px; /* Adjusted from 4161px (4161 - 3227 = 934px) */
-}
-
-/* Why 3: Fast Turnaround */
-.why-3 {
-  width: 517px;
-  height: 90px;
-  left: 92px;
-  top: 1100px; /* Adjusted from 4327px (4327 - 3227 = 1100px) */
-}
-
-/* Why 4: Post-Launch Support */
-.why-4 {
-  width: 500px;
-  height: 90px;
-  left: 744px;
-  top: 1100px; /* Adjusted from 4327px (4327 - 3227 = 1100px) */
-}
-
-/* Why 5: Proven Expertise */
+/* Why 5 (Proven Expertise) - Centered */
 .why-5 {
-  width: 528px;
-  height: 134px;
-  left: calc(50% - 528px / 2 - 14px);
-  top: 1266px; /* Adjusted from 4493px (4493 - 3227 = 1266px) */
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the item */
+  margin-top: 1rem;
+}
+
+.why-5 .text-box {
+  max-width: 528px; /* Match Figma design width */
 }
 
 /* Icon */
 .icon {
-  position: absolute;
-  width: 36.37px;
-  height: 36.37px;
+  width: 12px;
+  height: 12px;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  margin-top: 5px; /* Align icon with the top of the text */
 }
 
-/* Check Icon (mingcute:check-fill) */
 .check-icon {
-  position: absolute;
-  width: 36.37px;
-  height: 36.37px;
+  width: 100%;
+  height: 50%;
 }
 
-/* Why 1 Icon */
+/* Remove absolute positioning for icons */
 .why-1 .icon,
-.why-1 .check-icon {
-  left: 93px;
-  top: 946px; /* Adjusted from 4173px (4173 - 3227 = 946px) */
-}
-
-/* Why 2 Icon */
-.why-2 .icon,
 .why-2 .check-icon {
-  left: 744px;
-  top: 946px; /* Adjusted from 4173px (4173 - 3227 = 946px) */
-}
-
-/* Why 3 Icon */
-.why-3 .icon,
-.why-3 .check-icon {
-  left: 92px;
-  top: 1112px; /* Adjusted from 4339px (4339 - 3227 = 1112px) */
-}
-
-/* Why 4 Icon */
-.why-4 .icon,
-.why-4 .check-icon {
-  left: 744px;
-  top: 1112px; /* Adjusted from 4339px (4339 - 3227 = 1112px) */
-}
-
-/* Why 5 Icon */
-.why-5 .icon,
-.why-5 .check-icon {
-  left: 442px;
-  top: 1278px; /* Adjusted from 4505px (4505 - 3227 = 1278px) */
-}
-
-/* Check Icon Vectors */
-.check-icon .check-vector-1 {
-  position: absolute;
-  left: 50.32%;
-  right: 46.2%;
-  top: 96.43%;
-  bottom: 0.77%;
-  background: #58F93B;
-}
-
-.check-icon .check-vector-2 {
-  position: absolute;
-  left: 8.32%;
-  right: 8.4%;
-  top: 19.46%;
-  bottom: 21.07%;
-  background: #58F93B;
+  position: static; /* Remove absolute positioning */
 }
 
 /* Text Box */
 .text-box {
-  position: absolute;
+  flex: 1;
 }
 
-/* Why 1 Text Box */
-.why-1 .text-box {
-  width: 496px;
-  height: 90px;
-  left: 165px;
-  top: 934px; /* Adjusted from 4161px (4161 - 3227 = 934px) */
-}
-
-/* Why 2 Text Box */
-.why-2 .text-box {
-  width: 454px;
-  height: 90px;
-  left: 816px;
-  top: 934px; /* Adjusted from 4161px (4161 - 3227 = 934px) */
-}
-
-/* Why 3 Text Box */
-.why-3 .text-box {
-  width: 445px;
-  height: 90px;
-  left: 164px;
-  top: 1100px; /* Adjusted from 4327px (4327 - 3227 = 1100px) */
-}
-
-/* Why 4 Text Box */
-.why-4 .text-box {
-  width: 428px;
-  height: 90px;
-  left: 816px;
-  top: 1100px; /* Adjusted from 4327px (4327 - 3227 = 1100px) */
-}
-
-/* Why 5 Text Box */
-.why-5 .text-box {
-  width: 456px;
-  height: 134px;
-  left: 514px;
-  top: 1266px; /* Adjusted from 4493px (4493 - 3227 = 1266px) */
-}
-
-/* Heading 4 (Titles) */
 .text-box h3 {
-  position: absolute;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 33px;
-  line-height: 44px;
+  font-size: 24px;
+  line-height: 32px;
   letter-spacing: 0.25px;
   color: #000000;
+  margin-bottom: 0.25rem;
 }
 
-/* Why 1 Title */
-.why-1 .text-box h3 {
-  width: 496px;
-  height: 44px;
-  left: 165px;
-  top: 934px; /* Adjusted from 4161px (4161 - 3227 = 934px) */
-}
-
-/* Why 2 Title */
-.why-2 .text-box h3 {
-  width: 341px;
-  height: 44px;
-  left: 816px;
-  top: 934px; /* Adjusted from 4161px (4161 - 3227 = 934px) */
-}
-
-/* Why 3 Title */
-.why-3 .text-box h3 {
-  width: 259px;
-  height: 44px;
-  left: 164px;
-  top: 1100px; /* Adjusted from 4327px (4327 - 3227 = 1100px) */
-}
-
-/* Why 4 Title */
-.why-4 .text-box h3 {
-  width: 338px;
-  height: 44px;
-  left: 816px;
-  top: 1100px; /* Adjusted from 4327px (4327 - 3227 = 1100px) */
-}
-
-/* Why 5 Title */
-.why-5 .text-box h3 {
-  width: 268px;
-  height: 44px;
-  left: 514px;
-  top: 1266px; /* Adjusted from 4493px (4493 - 3227 = 1266px) */
-}
-
-/* Heading 5 (Descriptions) */
 .text-box p {
-  position: absolute;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 23px;
-  line-height: 32px;
-  color: #000000;
-}
-
-/* Why 1 Description */
-.why-1 .text-box p {
-  width: 367px;
-  height: 32px;
-  left: 165px;
-  top: 992px; /* Adjusted from 4219px (4219 - 3227 = 992px) */
-}
-
-/* Why 2 Description */
-.why-2 .text-box p {
-  width: 454px;
-  height: 32px;
-  left: 816px;
-  top: 992px; /* Adjusted from 4219px (4219 - 3227 = 992px) */
-}
-
-/* Why 3 Description */
-.why-3 .text-box p {
-  width: 445px;
-  height: 32px;
-  left: 164px;
-  top: 1158px; /* Adjusted from 4385px (4385 - 3227 = 1158px) */
-}
-
-/* Why 4 Description */
-.why-4 .text-box p {
-  width: 428px;
-  height: 32px;
-  left: 816px;
-  top: 1158px; /* Adjusted from 4385px (4385 - 3227 = 1158px) */
-}
-
-/* Why 5 Description */
-.why-5 .text-box p {
-  width: 456px;
-  height: 76px;
-  left: 514px;
-  top: 1324px; /* Adjusted from 4551px (4551 - 3227 = 1324px) */
+  font-size: 16px;
+  line-height: 24px;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .why-section {
-    width: 100%;
-    height: auto;
-    left: 0;
-    top: 0; /* Adjust based on your page layout */
-    padding: 20px;
-  }
-
-  .header {
-    width: 100%;
-    left: 0;
-    top: 0;
-    text-align: center;
-  }
-
+@media (max-width: 1024px) {
   .why-heading {
-    width: 100%;
-    left: 0;
-    top: 30px;
     font-size: 36px;
     line-height: 44px;
   }
 
-  .question-icon {
-    display: none; /* Hide the question icon on mobile */
+  .question-icon-svg {
+    width: 10px;
+    height: 10px;
+    padding: 3px;
   }
 
   .why-img-box {
-    width: 100%;
-    height: auto;
-    left: 0;
-    top: 100px;
+    height: 400px;
+  }
+
+  .img-1 {
+    width: 45%;
+    height: 300px;
+  }
+
+  .img-2 {
+    width: 45%;
+    height: 300px;
+    top: 80px;
   }
 
   .img-rectangle {
-    width: 100%;
+    width: 70%;
+    height: 200px;
+    left: 15%;
+    top: 35%;
+  }
+
+  .why-item {
+    width: 100%; /* Stack items vertically */
+  }
+
+  .text-box h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .text-box p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-section {
+    padding: 1rem;
+  }
+
+  .why-heading {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .question-icon {
+    display: none;
+  }
+
+  .why-img-box {
     height: auto;
-    left: 0;
-    top: 0;
-    border: none; /* Remove border on mobile for simplicity */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-rectangle {
+    display: none;
   }
 
   .img-1,
   .img-2 {
     position: relative;
     width: 100%;
-    height: 300px;
-    left: 0;
+    max-width: 500px;
+    height: 250px;
     top: 0;
-    margin-bottom: 20px;
+    left: 0;
+    margin-bottom: 1rem;
   }
 
   .why-text-box {
-    width: 100%;
-    height: auto;
-    left: 0;
-    top: 750px; /* Adjust based on image height */
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .why-item {
-    position: relative;
     width: 100%;
-    left: 0;
-    margin-bottom: 40px;
   }
 
-  .why-1 { top: 0; }
-  .why-2 { top: 100px; }
-  .why-3 { top: 200px; }
-  .why-4 { top: 300px; }
-  .why-5 { top: 400px; }
-
-  .icon,
-  .check-icon {
-    left: 20px;
-  }
-
-  .text-box {
-    width: 100%;
-    left: 70px;
+  .why-5 {
+    margin-top: 0;
   }
 
   .text-box h3 {
-    width: 100%;
-    left: 70px;
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .text-box p {
-    width: 100%;
-    left: 70px;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 14px;
+    line-height: 20px;
   }
-
-  /* Adjust description positions for mobile */
-  .why-1 .text-box p { top: 50px; }
-  .why-2 .text-box p { top: 50px; }
-  .why-3 .text-box p { top: 50px; }
-  .why-4 .text-box p { top: 50px; }
-  .why-5 .text-box p { top: 50px; }
 }

@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
-/* Import the Inter font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap');
 
 /* Reset default styles */
@@ -18,7 +17,7 @@ html, body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Ensure the parent container allows for absolute positioning */
+/* Ensure the parent container allows for proper flow */
 body {
   position: relative;
   min-height: 3140px; /* Adjusted to accommodate all sections */
@@ -26,11 +25,9 @@ body {
 
 /* Hero Section */
 .hero {
-  position: absolute;
+  position: relative; /* Changed to relative to take up space in the document flow */
   width: 100vw;
   height: 1024px;
-  left: 0px;
-  top: 0px;
   background: url('../../../public/Hero\ image1.png') no-repeat center center;
   background-size: cover;
 }
@@ -51,8 +48,7 @@ body {
   height: 113px;
   left: 3px; /* 83px - 80px (relative to hero-content) */
   top: 0; /* 565px - 565px */
-  /* font-family: 'Inter', sans-serif; in figma */
-  font-family: 'roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 200;
   font-size: 93px;
@@ -103,12 +99,13 @@ body {
 
 /* Navbar Styles */
 .navbar {
-  position: absolute;
-  width: 1440px;
+  position: fixed; /* Changed to fixed to stay at the top while scrolling */
+  width: 100%;
   height: 90px;
   left: 0px;
   top: 0px;
-  z-index: 10;
+  z-index: 20; /* Increased z-index to stay above other content */
+  background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for visibility */
 }
 
 .navbar-logo {
@@ -361,232 +358,361 @@ body {
   background-color: #16a34a;
 }
 
-/* Footer Container */
-.footer {
-  position: absolute;
-  bottom: 0;
+/* WelcomeSection CSS */
+.section-features {
   width: 100%;
-  background: #091906; /* Blackish green */
-  color: #ffffff;
-  font-family: 'Inter', sans-serif;
-  padding: 50px 0;
-}
-
-/* Footer Columns Container */
-.footer-columns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1258px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1rem;
+  margin-top: 3rem; /* Small margin for spacing between Hero and WelcomeSection */
 }
 
-/* General Column Styling */
-.footer-col {
-  margin-bottom: 40px;
-}
-
-/* Column 1: Company Info */
-.footer-col-1 {
-  width: 388px;
-}
-
-.footer-col-1 .logo {
-  font-size: 40px;
-  font-weight: bold;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.footer-col-1 h3 {
-  font-size: 19px;
-  font-weight: 400;
-  line-height: 27px;
-  letter-spacing: 0.25px;
-  margin-bottom: 20px;
-}
-
-.footer-col-1 h4 {
-  font-size: 23px;
-  font-weight: 400;
-  line-height: 32px;
-  color: #eefeeb; /* Whiteish green */
-  margin-bottom: 15px;
-}
-
-.footer-col-1 p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  margin-bottom: 10px;
-}
-
-/* Column 2: Quick Links */
-.footer-col-2 {
-  width: 186px;
-}
-
-.footer-col-2 h2 {
-  font-size: 33px;
-  font-weight: 400;
-  line-height: 44px;
-  letter-spacing: 0.25px;
-  margin-bottom: 20px;
-}
-
-.footer-col-2 ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-col-2 ul li {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  margin-bottom: 15px;
-}
-
-/* Column 3: Services */
-.footer-col-3 {
-  width: 218px;
-}
-
-.footer-col-3 h2 {
-  font-size: 33px;
-  font-weight: 400;
-  line-height: 44px;
-  letter-spacing: 0.25px;
-  margin-bottom: 20px;
-}
-
-.footer-col-3 ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-col-3 ul li {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  margin-bottom: 15px;
-}
-
-/* Column 4: Legal & Policies */
-.footer-col-4 {
-  width: 247px;
-}
-
-.footer-col-4 h2 {
-  font-size: 33px;
-  font-weight: 400;
-  line-height: 44px;
-  letter-spacing: 0.25px;
-  margin-bottom: 20px;
-}
-
-.footer-col-4 ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-col-4 ul li {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  margin-bottom: 15px;
-}
-
-/* Column 5: Contact Info */
-.footer-col-5 {
-  width: 481px;
-}
-
-.footer-col-5 ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-col-5 ul li {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  margin-bottom: 15px;
-}
-
-.footer-col-5 .icon {
-  margin-right: 10px;
-  color: #58f93b; /* Primary green */
-}
-
-/* Column 6: Social Media */
-.footer-col-6 {
-  width: 180px;
-}
-
-.footer-col-6 h2 {
-  font-size: 33px;
-  font-weight: 400;
-  line-height: 44px;
-  letter-spacing: 0.25px;
-  margin-bottom: 20px;
-}
-
-.social-icons {
-  display: flex;
-  gap: 20px;
-}
-
-.social-icon {
-  width: 36px;
-  height: 36px;
-  background: #eefeeb; /* Whiteish green */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 20px;
-  color: #091906;
-}
-
-/* Divider Line */
-.divider {
+.features {
   width: 100%;
-  height: 1px;
-  background: #12320c; /* Blackish green 2 - lighter */
-  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Copyright */
-.copyright {
-  text-align: center;
-  font-size: 16px;
+.heading-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  margin-bottom: 3rem;
+}
+
+.welcome-heading {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
   font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.5px;
+  font-size: 47px;
+  line-height: 57px;
+  letter-spacing: -0.005em;
+  color: #000000;
+  text-align: center;
+  position: relative;
+  margin: 0;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .footer-columns {
-    flex-direction: column;
-    align-items: center;
+.heading-decore {
+  position: absolute;
+  top: -15px;
+  left: -40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.subtract {
+  background: #58F93B;
+}
+
+.subtract-1 {
+  width: 20px;
+  height: 20px;
+}
+
+.subtract-2 {
+  width: 10px;
+  height: 10px;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1280px;
+  gap: 2rem;
+}
+
+.feature {
+  position: relative;
+  width: 411px;
+  box-shadow: 0px 12px 24px 1px rgba(18, 50, 12, 0.1);
+  border-radius: 999999999px;
+}
+
+.feature-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #EEFEEB;
+  border-radius: 999999999px;
+  overflow: hidden;
+}
+
+.ellipse {
+  position: absolute;
+  width: 411px;
+  height: 411px;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.rectangle {
+  position: absolute;
+  width: 411px;
+  background: transparent;
+}
+
+.icon {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.vector {
+  position: absolute;
+  background: #58F93B;
+}
+
+.feature-content {
+  position: relative;
+  padding: 70px 30px;
+  text-align: center;
+}
+
+.feature-heading {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 44px;
+  letter-spacing: 0.25px;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.feature-text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
+/* Feature 1: Affordable Solutions */
+.feature-1 {
+  height: 545px;
+}
+
+.feature-1 .feature-background {
+  height: 545px;
+}
+
+.feature-1 .ellipse-1 {
+  top: 0;
+}
+
+.feature-1 .ellipse-2 {
+  top: 134px;
+}
+
+.feature-1 .rectangle-3 {
+  height: 137px;
+  top: 214px;
+}
+
+.feature-1 .development-icon {
+  top: 100px;
+}
+
+.feature-1 .vector-1 {
+  left: 4.17%;
+  right: 4.17%;
+  top: 4.17%;
+  bottom: 4.17%;
+}
+
+.feature-1 .vector-2 {
+  left: 29.14%;
+  right: 54.14%;
+  top: 49.98%;
+  bottom: 24.98%;
+}
+
+.feature-1 .vector-3 {
+  left: 54.14%;
+  right: 29.14%;
+  top: 49.98%;
+  bottom: 24.98%;
+}
+
+.feature-1 .feature-content {
+  padding-top: 250px;
+}
+
+/* Feature 2: Our Mission */
+.feature-2 {
+  height: 702px;
+}
+
+.feature-2 .feature-background {
+  height: 702px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.feature-2 .ellipse-1 {
+  top: 0;
+}
+
+.feature-2 .ellipse-2 {
+  top: 291px;
+}
+
+.feature-2 .rectangle-3 {
+  height: 274px;
+  top: 214px;
+}
+
+.feature-2 .mission-icon {
+  top: 100px;
+}
+
+.feature-2 .vector-1 {
+  left: 28.15%;
+  right: 28.12%;
+  top: 3.07%;
+  bottom: 2.98%;
+}
+
+.feature-2 .vector-2 {
+  left: 59.29%;
+  right: 9.37%;
+  top: 9.34%;
+  bottom: 53.12%;
+}
+
+.feature-2 .feature-content {
+  padding-top: 250px;
+}
+
+/* Feature 3: Our Goal */
+.feature-3 {
+  height: 822px;
+}
+
+.feature-3 .feature-background {
+  height: 822px;
+}
+
+.feature-3 .ellipse-1 {
+  top: 0;
+}
+
+.feature-3 .ellipse-2 {
+  top: 411px;
+}
+
+.feature-3 .rectangle-3 {
+  height: 389px;
+  top: 214px;
+}
+
+.feature-3 .goal-icon {
+  top: 162px;
+}
+
+.feature-3 .vector-1 {
+  left: 3.44%;
+  right: 2.29%;
+  top: 2.85%;
+  bottom: 2.48%;
+}
+
+.feature-3 .vector-2 {
+  left: 31.05%;
+  right: 36.42%;
+  top: 37.37%;
+  bottom: 30.09%;
+}
+
+.feature-3 .vector-3 {
+  left: 3.44%;
+  right: 8.66%;
+  top: 9.62%;
+  bottom: 2.48%;
+}
+
+.feature-3 .feature-content {
+  padding-top: 312px;
+}
+
+/* Responsive Design for WelcomeSection */
+@media (max-width: 1280px) {
+  .section-features {
+    margin-top: 2rem; /* Adjust spacing for smaller screens */
   }
 
-  .footer-col {
-    width: 100%;
-    text-align: center;
-  }
-
-  .footer-col-5 ul li,
-  .footer-col-6 .social-icons {
+  .features-container {
+    flex-direction: row;
     justify-content: center;
+    gap: 1rem;
+  }
+
+  .feature {
+    width: 33%;
+    min-width: 300px;
+  }
+
+  .feature-content {
+    padding: 1rem;
+  }
+
+  .feature-1 .feature-content,
+  .feature-2 .feature-content,
+  .feature-3 .feature-content {
+    padding-top: 200px;
+  }
+}
+
+/* Responsive Design for Navbar and Hero */
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .navbar-links {
+    width: 100%;
+    left: 0;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .navbar-button {
+    left: auto;
+    right: 20px;
+  }
+
+  .hero-content {
+    width: 90%;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hero-title {
+    font-size: 60px;
+    line-height: 70px;
+    width: 100%;
+  }
+
+  .hero-subtitle {
+    font-size: 40px;
+    line-height: 50px;
+    width: 100%;
+  }
+
+  .hero-button {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
   }
 }

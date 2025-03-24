@@ -3,12 +3,12 @@
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 0 1rem;
+  margin-top: 104px; /* Start after the Hero section (1024px height) */
 }
 
-/* Features */
+/* Features Container */
 .features {
-  
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -17,17 +17,17 @@
 
 /* Heading Container */
 .heading-container {
-  position: relative;
+  position: relative; /* Changed to relative to flow naturally within the section */
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 1280px;
   margin-bottom: 3rem;
 }
 
-/* Welcome to Obiztec */
+/* Welcome Heading */
 .welcome-heading {
-  position: absolute;
-  top: 0;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -36,12 +36,14 @@
   letter-spacing: -0.005em;
   color: #000000;
   text-align: center;
+  position: relative;
+  margin: 0;
 }
 
-/* Heading के पास जो हरे बॉक्स हैं */
+/* Heading Decorative Elements */
 .heading-decore {
   position: absolute;
-  top: -10px;
+  top: -15px;
   left: -40px;
   display: flex;
   flex-direction: column;
@@ -49,8 +51,6 @@
 }
 
 .subtract {
-  width: 10px;
-  height: 10px;
   background: #58F93B;
 }
 
@@ -64,7 +64,7 @@
   height: 10px;
 }
 
-/* तीनों कार्ड्स को एक लाइन में रखने के लिए */
+/* Features Container (Cards) */
 .features-container {
   display: flex;
   justify-content: space-between;
@@ -73,11 +73,12 @@
   gap: 2rem;
 }
 
-/* हर कार्ड के लिए कॉमन स्टाइल्स */
+/* Feature Cards */
 .feature {
   position: relative;
   width: 411px;
   box-shadow: 0px 12px 24px 1px rgba(18, 50, 12, 0.1);
+  border-radius: 999999999px;
 }
 
 .feature-background {
@@ -85,26 +86,24 @@
   width: 100%;
   height: 100%;
   background: #EEFEEB;
+  border-radius: 999999999px;
   overflow: hidden;
 }
 
-/* बैकग्राउंड में जो सर्कल्स हैं, इनका कलर हटा दिया */
 .ellipse {
   position: absolute;
   width: 411px;
   height: 411px;
-  background: transparent; /* कलर हटा दिया */
+  background: transparent;
   border-radius: 50%;
 }
 
-/* बैकग्राउंड में जो रेक्टैंगल है, इसका कलर हटा दिया */
 .rectangle {
   position: absolute;
   width: 411px;
-  background: transparent; /* कलर हटा दिया */
+  background: transparent;
 }
 
-/* आइकन को सेंटर में रखने के लिए */
 .icon {
   position: absolute;
   width: 90px;
@@ -118,10 +117,9 @@
   background: #58F93B;
 }
 
-/* टेक्स्ट और हेडिंग को सही जगह पर रखने के लिए */
 .feature-content {
   position: relative;
-  padding: 1rem;
+  padding: 70px 30px;
   text-align: center;
 }
 
@@ -293,17 +291,21 @@
   padding-top: 312px;
 }
 
-/* छोटी स्क्रीन के लिए रिस्पॉन्सिव डिज़ाइन */
+/* Responsive Design */
 @media (max-width: 1280px) {
+  .section-features {
+    margin-top: 1024px; /* Ensure the section starts after Hero on smaller screens */
+  }
+
   .features-container {
-    flex-direction: row; /* छोटी स्क्रीन पर भी एक ही रो में रहें */
+    flex-direction: row;
     justify-content: center;
     gap: 1rem;
   }
 
   .feature {
-    width: 33%; /* हर कार्ड को स्क्रीन का 33% हिस्सा दे दिया */
-    min-width: 300px; /* मिनिमम चौड़ाई सेट की ताकि कार्ड्स बहुत छोटे ना हों */
+    width: 33%;
+    min-width: 300px;
   }
 
   .feature-content {
