@@ -3,33 +3,33 @@
 
 /* Services Section (Background) */
 .services-section {
-  position: absolute;
-  width: 1440px;
-  height: 886px;
-  left: 0px;
-  top: 2251px;
-  background: #091906 !important; /* Blackish green - applied only to this section */
+  position: relative; /* Changed to relative to take up space in the document flow */
+  width: 100vw !important;
+  max-width: 100vw;
+  height: auto; /* Let the height adjust based on content */
+  margin: 0 auto;
+  margin-top: 3rem; /* Add spacing after the previous section (WelcomeSection) */
+  background: #091906; /* Blackish green */
   border: 2px solid #58F93B; /* Add rectangular border */
   border-radius: 11px; /* Add border radius */
   box-sizing: border-box; /* Ensure border is included in dimensions */
+  padding: 50px 80px; /* Add padding for internal spacing */
 }
 
 /* Heading Container */
 .heading-container {
-  position: absolute;
-  width: 313px;
+  position: relative; /* Changed to relative to flow naturally */
+  width: 100% !important;
+  max-width: 313px;
   height: 57.22px;
-  left: 80px;
-  top: 2351.17px;
+  margin-bottom: 50px; /* Add spacing below the heading */
 }
 
 /* Our Services Heading */
 .services-heading {
-  position: absolute;
+  position: relative; /* Changed to relative to flow naturally */
   width: 293px; /* 283 in Figma */
   height: 47.27px;
-  left: 0;
-  top: 9.95px; /* 2361.12px - 2351.17px (relative to heading-container) */
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -37,7 +37,6 @@
   line-height: 57px;
   letter-spacing: -0.005em;
   color: #FFFFFF;
-  z-index: 1; /* Ensure it appears above other elements */
 }
 
 /* Subtract Shape (Decorative Element) */
@@ -45,77 +44,53 @@
   position: absolute;
   width: 28px;
   height: 24.51px;
-  left: 285px; /* 365px - 80px (relative to heading-container) */
-  top: 0; /* 2351.17px - 2351.17px */
+  left: 285px; /* Position relative to heading-container */
+  top: 0;
   background: #58F93B; /* Primary green */
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
-  z-index: 1;
 }
 
 /* Services Content (Container for the list and image) */
 .services-content {
-  position: absolute;
-  width: 1280px; /* Adjusted to fit both list and image */
-  height: 517.81px;
-  left: 80px;
-  top: 2478.86px;
+  position: relative; /* Changed to relative to flow naturally */
+  width: 100%;
+  max-width: 1280px;
+  display: flex; /* Use flexbox to align list and image */
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem; /* Add spacing between list and image */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 /* Services List */
 .services-list {
   position: relative;
   width: 586px;
-  height: 100%;
-  float: left; /* Align list to the left */
+  height: auto; /* Let the height adjust based on content */
 }
 
 /* Service Item */
 .service-item {
-  position: absolute;
+  position: relative; /* Changed to relative to flow naturally */
   display: flex;
   align-items: flex-start;
+  margin-bottom: 60px; /* Add spacing between items */
 }
 
-/* Service 1: Website Development */
-.service-1 {
-  width: 586px;
-  height: 55.56px;
-  top: 0; /* 2478.86px - 2478.86px */
-}
-
-/* Service 2: E-Commerce Solutions */
-.service-2 {
-  width: 656px;
-  height: 55.56px;
-  top: 115.56px; /* 2594.42px - 2478.86px */
-}
-
-/* Service 3: Mobile App Development */
-.service-3 {
-  width: 510px;
-  height: 55.56px;
-  top: 231.12px; /* 2709.98px - 2478.86px */
-}
-
-/* Service 4: SEO & Digital Marketing */
-.service-4 {
-  width: 513px;
-  height: 55.56px;
-  top: 346.69px; /* 2825.55px - 2478.86px */
-}
-
-/* Service 5: Branding & Design */
+/* Remove absolute positioning for service items */
+.service-1,
+.service-2,
+.service-3,
+.service-4,
 .service-5 {
-  width: 483px;
-  height: 55.56px;
-  top: 462.25px; /* 2941.11px - 2478.86px */
+  width: 100%; /* Let the width adjust naturally */
+  height: auto; /* Let the height adjust naturally */
 }
 
 /* Service Icon */
 .service-icon {
-  position: absolute;
-  left: 0;
-  top: 0;
+  position: relative; /* Changed to relative to flow naturally */
+  flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
 .service-icon img {
@@ -151,48 +126,33 @@
 
 /* Service Text */
 .service-text {
-  position: absolute;
-  left: 60px; /* 140px - 80px (relative to service-item) */
-  top: 0;
+  position: relative; /* Changed to relative to flow naturally */
+  margin-left: 20px; /* Add spacing between icon and text */
 }
 
 /* Service Title (h3) */
 .service-text h3 {
-  position: absolute;
-  top: 0;
+  position: relative; /* Changed to relative to flow naturally */
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 23px;
   line-height: 32px;
   color: #FFFFFF;
-  z-index: 1;
 }
 
-/* Specific widths for each title */
-.service-1 .service-text h3 {
-  width: 238px;
-}
-
-.service-2 .service-text h3 {
-  width: 270px;
-}
-
-.service-3 .service-text h3 {
-  width: 293px;
-}
-
-.service-4 .service-text h3 {
-  width: 277px;
-}
-
+/* Remove specific widths for titles (let them adjust naturally) */
+.service-1 .service-text h3,
+.service-2 .service-text h3,
+.service-3 .service-text h3,
+.service-4 .service-text h3,
 .service-5 .service-text h3 {
-  width: 250px;
+  width: auto;
 }
 
 /* Service Description (p) */
 .service-text p {
-  position: absolute;
+  position: relative; /* Changed to relative to flow naturally */
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -200,46 +160,26 @@
   line-height: 24px;
   letter-spacing: 0.5px;
   color: #FFFFFF;
-  z-index: 1;
+  margin-top: 8px; /* Add spacing between title and description */
 }
 
-/* Position and width for each description */
-.service-1 .service-text p {
-  top: 39.8px; /* 2518.66px - 2478.86px */
-  width: 471px;
-}
-
-.service-2 .service-text p {
-  top: 39.81px; /* 2634.23px - 2594.42px */
-  width: 526px;
-}
-
-.service-3 .service-text p {
-  top: 39.81px; /* 2749.79px - 2709.98px */
-  width: 450px;
-}
-
-.service-4 .service-text p {
-  top: 39.81px; /* 2865.35px - 2825.55px */
-  width: 453px;
-}
-
+/* Remove specific widths and top positions for descriptions */
+.service-1 .service-text p,
+.service-2 .service-text p,
+.service-3 .service-text p,
+.service-4 .service-text p,
 .service-5 .service-text p {
-  top: 39.81px; /* 2980.91px - 2941.11px */
-  width: 423px;
+  width: auto;
 }
 
 /* Services Image */
 .services-image {
-  position: absolute;
-  width: 629.23px; /* Updated to match Figma */
-  height: 420px; /* Updated to match Figma */
-  left: 652px; /* 732px - 80px (relative to services-content) */
-  top: 49.14px; /* 2528px - 2478.86px (relative to services-content) */
+  position: relative; /* Changed to relative to flow naturally */
+  width: 629.23px;
+  height: 420px;
   border: 2px solid #58F93B;
   border-radius: 11px;
   box-shadow: 0px 9px 16px -10px #DEFED8;
-  z-index: 1;
   overflow: hidden;
 }
 
@@ -250,21 +190,37 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1280px) {
+  .services-section {
+    padding: 40px;
+  }
+
+  .services-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-list {
+    width: 100%;
+  }
+
+  .services-image {
+    width: 100%;
+    max-width: 629.23px;
+    height: 420px;
+  }
+}
+
 @media (max-width: 768px) {
   .services-section {
-    width: 100%;
-    height: auto;
-    top: 1800px; /* Adjust based on your page layout */
-    padding-bottom: 40px;
-    border: 2px solid #58F93B; /* Retain border in responsive view */
-    border-radius: 11px;
+    padding: 30px;
+    margin-top: 2rem;
   }
 
   .heading-container {
-    width: 90%;
-    left: 5%;
-    top: 50px;
+    max-width: 100%;
     height: auto;
+    margin-bottom: 30px;
   }
 
   .services-heading {
@@ -278,62 +234,24 @@
   }
 
   .services-content {
-    width: 90%;
-    left: 5%;
-    top: 150px;
-    height: auto;
-  }
-
-  .services-list {
-    width: 100%;
-    float: none;
+    gap: 1rem;
   }
 
   .service-item {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-bottom: 60px;
-  }
-
-  /* Adjust positions for service items */
-  .service-1,
-  .service-2,
-  .service-3,
-  .service-4,
-  .service-5 {
-    top: 0;
-    margin-bottom: 60px;
-  }
-
-  .service-2 { margin-top: 60px; }
-  .service-3 { margin-top: 120px; }
-  .service-4 { margin-top: 180px; }
-  .service-5 { margin-top: 240px; }
-
-  .service-text {
-    left: 50px;
+    margin-bottom: 40px;
   }
 
   .service-text h3 {
-    width: 100% !important; /* Override specific widths */
     font-size: 20px;
     line-height: 28px;
   }
 
   .service-text p {
-    width: 100% !important; /* Override specific widths */
     font-size: 14px;
     line-height: 20px;
   }
 
   .services-image {
-    position: relative;
-    width: 100%;
     height: 300px;
-    left: 0;
-    top: 300px; /* Adjust based on content height */
-    border: 2px solid #58F93B; /* Retain border in responsive view */
-    border-radius: 11px;
   }
 }
